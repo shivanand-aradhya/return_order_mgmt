@@ -1,0 +1,67 @@
+<div class="container">
+  <form
+    class="form-signin"
+    [formGroup]="signupForm"
+    (ngSubmit)="returnOrder()"
+  >
+    <h3 class="h3 mb-3 font-weight-normal text-center">Return Order Request</h3>
+    <div class="form-group">
+      <label>Username</label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="userName"
+        placeholder="Enter name"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label>Contact Number</label>
+      <input
+        type="number"
+        class="form-control"
+        formControlName="contactNumber"
+        placeholder="Enter contact"
+        required
+      />
+    </div>
+	<div class="form-group">
+      <label>Priority Request</label>
+	              <select formControlName="isPriorityRequest" class="form-control">
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </select>
+
+     
+    </div>
+		<div class="form-group">
+      <label>Component Type</label>
+	  
+            <select formControlName="componentType" class="form-control">
+                <option value="accessory" >Accessory</option>
+                <option value="integral">Integral</option>
+            </select>
+	  
+    </div><div class="form-group">
+      <label>Component Name</label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="componentName"
+        placeholder="componentName"
+        required
+      />
+    </div><div class="form-group">
+      <label>Quantity</label>
+      <input
+        type="number"
+        class="form-control"
+        formControlName="quantity"
+        placeholder="quantity"
+        required
+      />
+    </div>
+    <button type="submit" class="btn btn-block btn-primary" [disabled]="!signupForm.valid">Return Request</button>
+  </form>
+</div>
+

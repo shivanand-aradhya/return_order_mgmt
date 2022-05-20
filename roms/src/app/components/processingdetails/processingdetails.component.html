@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <div class="inner-main">
+      <h2 class="mb-4">Return Order Information</h2>
+      <p><strong>Request ID:</strong> {{ requestId }}</p>
+      <p><strong>Processing Charge:</strong> {{ processingCharge }}</p>
+	  <p><strong>Package And Delivery Charge:</strong> {{ packageAndDeliveryCharge }}</p>
+	  <p><strong>Date Of Delivery:</strong> {{ dateOfDelivery }}</p>
+    </div>
+	<div><button (click)="cancelOrder()"  *ngIf="this.authService.isLoggedIn" type="button" class="btn btn-danger">Cancel Return Order</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button (click)="confirmOrder()"  *ngIf="this.authService.isLoggedIn" type="button" class="btn btn-success">Confirm Return Order</button></div>
+  </div>
+</div>

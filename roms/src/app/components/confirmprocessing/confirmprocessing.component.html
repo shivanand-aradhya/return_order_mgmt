@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="row">
+    <div class="inner-main">
+      <h2 class="mb-4">Confirmed Return Order </h2>
+      <p>Please retain request id for future reference: {{ requestId }}</p>
+    </div>
+	<div class="newReturnOrder">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button (click)="newReturnOrder()"  *ngIf="this.authService.isLoggedIn" type="button" class="btn btn-success">New Return Order</button></div>
+  </div>
+</div>
